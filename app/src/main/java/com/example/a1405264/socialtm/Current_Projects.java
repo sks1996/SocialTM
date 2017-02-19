@@ -76,9 +76,6 @@ public class Current_Projects extends Fragment {
             }
         });
 
-
-
-
         return  view;
     }
 
