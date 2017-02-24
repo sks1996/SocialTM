@@ -81,8 +81,17 @@ public class Home extends AppCompatActivity
 
                 Toast.makeText(getApplicationContext(),"Signout !",Toast.LENGTH_LONG).show();
                 mAuth.signOut();
+
+                Intent intent = new Intent(this, LoginActivity.class);
+                intent.putExtra("finish", true);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // To clean up all activities
+                startActivity(intent);
+
                 finish();
                 break;
+
+            case R.id.send_app:
+                startActivity(new Intent(this,Share_aap.class));
         }
 
         return super.onOptionsItemSelected(item);
